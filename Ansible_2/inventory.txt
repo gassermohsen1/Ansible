@@ -1,12 +1,12 @@
-[master]
-master ansible_host=10.0.2.58
+[k8s-master]
+
+k8s-master-1 ansible_host=10.0.2.204 ansible_user=ubuntu ansible_ssh_private_key_file=/home/ubuntu/terraform.pem
 
 [workers]
-worker1 ansible_host=10.0.2.128
+worker1 ansible_host=10.0.2.239 ansible_user=ubuntu ansible_ssh_private_key_file=/home/ubuntu/terraform.pem
 
 
 [all:vars]
 ansible_python_interpreter=/usr/bin/python3
 ansible_ssh_extra_args='-o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null'
-ansible_ssh_private_key_file=/home/ubuntu/terraform.pem
 ansible_user=ubuntu
