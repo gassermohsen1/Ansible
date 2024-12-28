@@ -2,7 +2,7 @@
   tasks:
     - name: Copy Kubernetes manifest file to master node
       copy:
-        src: ~/Ansible_2/Application/  # Path to the file on the Ansible machine
+        src: ~/Ansible/Application/  # Path to the file on the Ansible machine
         dest: ~/Application/
 
     - name: Apply Kubernetes manifest using kubectl
