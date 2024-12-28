@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Define the paths to the files containing the IPs
-master_ip_file="masternode_ip"
-worker_ip_file="workernode_ip"
+master_ip_file="~/Ansible/masternode_ip"
+worker_ip_file="~/Ansible/workernode_ip"
 
 # Read the IPs from the files
 masternode_ip=$(cat $master_ip_file)
