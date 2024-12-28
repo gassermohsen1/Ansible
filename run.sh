@@ -6,6 +6,6 @@ ansible-playbook -i Ansible/inventory.txt $HOME/Ansible/playbooks/worker.yaml
 
 #wait for 1 minute to let the ingress controller ready 
 
-sleep 60
+sleep 120
 
 ansible-playbook -i Ansible/inventory.txt $HOME/Ansible/playbooks/juice-shop.yaml
