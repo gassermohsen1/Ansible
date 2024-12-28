@@ -47,10 +47,3 @@
     - name: Patch ingress service to be NodePort with default port 30000
       ansible.builtin.shell: |
             kubectl patch svc ingress-nginx-controller -n ingress-nginx --type=json -p "[{\"op\": \"replace\", \"path\": \"/spec/type\", \"value\": \"NodePort\"}, {\"op\": \"replace\", \"path\": \"/spec/ports/0/nodePort\", \"value\": 30000}]"
-    - name: Copy Kubernetes manifest file to master node
-      copy:
-        src: ~/Ansible/Application/  # Path to the file on the Ansible machine
-        dest: ~/Application/
-
-    - name: Apply Kubernetes manifest using kubectl
-      command: kubectl apply -f ~/Application/*
